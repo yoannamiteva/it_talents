@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+.page-header div {
+	background-color: #000000;
+	width: 100%;
+	padding-bottom: 2%;
+}
+
+.page-section {
+	width: 100%;
+	padding-bottom: 30%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+.page-section div:nth-child(1) {
+	width: 19%;
+	padding-bottom: 30%;
+	background-color: #800080;
+	float: left;
+}
+
+.page-section div:nth-child(2) {
+	width: 59%;
+	padding-bottom: 30%;
+	background-color: #008000;
+	float: left;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+
+.page-section div:nth-child(3) {
+	width: 19%;
+	padding-bottom: 30%;
+	background-color: #ff0000;
+	float: right;
+}
+
+.page-footer div {
+	width: 100%;
+	padding-bottom: 2%;
+	background-color: #0000ff;
+}

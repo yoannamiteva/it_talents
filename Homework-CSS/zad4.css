@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+.page-header div {
+	width: 50%;
+	padding-bottom: 7%;
+	background-color: #497e7e;
+}
+
+.page-section {
+	width: 50%;
+	padding-bottom: 30%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+.page-section div:nth-child(1) {
+	width: 29%;
+	padding-bottom: 60%;
+	background-color: #d700ac;
+	float: left;
+}
+
+.page-section div:nth-child(2) {
+	width: 69%;
+	padding-bottom: 60%;
+	background-color: #49ff00;
+	float: right;
+}
+
+.page-footer div {
+	width: 50%;
+	padding-bottom: 7%;
+	background-color: #0000ff;
+}

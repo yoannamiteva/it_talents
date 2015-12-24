@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Roulette</title>
+	<style>
+		#ball {
+		width: 290px;
+	    top: 200px;
+	    left: 27px;
+	    margin-left: 0px;
+	    padding-left: 60px;
+		position: absolute;
+		-webkit-animation: spin 5s 5 linear;
+	}
+	@-webkit-keyframes spin {
+	    0%  {-webkit-transform: rotate(0deg);}
+	    100% {-webkit-transform: rotate(360deg);}   
+	}
+	
+	#ball div {
+		width: 15px;
+		height: 15px;
+		background: #ffffff;
+		border-radius: 50%;
+	}
+	</style>
+</head>
+<body>
+	<img src="../Homework-CSS/roulette.jpg">
+	<div id="ball">
+		<div>
+		</div>
+	</div>
+
+</body>
+</html>
