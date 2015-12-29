@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Random image</title>
+<script>
+	var Images = new Array();
+	Images[0] = new Image();
+	Images[0].src = '../Homework-JS/Photos/view1.jpg';
+	Images[1] = new Image();
+	Images[1].src = '../Homework-JS/Photos/view2.jpg';
+	Images[2] = new Image();
+	Images[2].src = '../Homework-JS/Photos/view3.jpg';
+	Images[3] = new Image();
+	Images[3].src = '../Homework-JS/Photos/view4.jpg';
+	Images[4] = new Image();
+	Images[4].src = '../Homework-JS/Photos/view5.jpg';
+	
+	
+	
+	function displayImage()
+	{
+		 var lenght =  Images.lenght; 
+		 var randomImage = Math.floor(Math.random() * lenght);
+		 document.getElementById('img').innerHTML = '<img src="' + Images[randomImage] + '">';
+	}
+	
+</script>
+
+</head>
+<body>
+<div id="img">
+<script>
+	displayImage();
+</script>
+</div>
+</body>
+</html>

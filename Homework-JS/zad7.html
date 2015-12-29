@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Convert</title>
+<script>
+
+	function convertToKg(lbs)
+	{
+ 		var kg = lbs*0.45359237;
+		document.forms.form1.valueKg.value = kg.toFixed(4);
+ 	}	
+	
+	function convertToLbs(kg)
+	{
+		var lbs = kg*2.20462262185;
+		document.forms.form2.valueLbs.value = lbs.toFixed(4);
+	}	
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+	<table width="50%">
+		<tr> 
+			<td width="20%" height="32">Convert lbs</td>
+			<td width="25%"><input size="5" onblur="convertToKg(this.value)"></td>
+			<td width="20%">in kg</td>
+			<td width="30%"><input name="valueKg" type="text" id="valueKg" size="5"></td>
+		</tr>
+	</table>
+</form>
+<form name="form2" method="post" action="">
+	<table width="50%">
+		<tr> 
+			<td width="20%" height="32">Convert kg</td>
+			<td width="25%"><input size="5" onblur="convertToLbs(this.value)"></td>
+			<td width="20%">in lbs</td>
+			<td width="30%"><input name="valueLbs" type="text" id="valueLbs" size="5"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

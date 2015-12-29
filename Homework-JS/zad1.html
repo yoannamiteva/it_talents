@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Most popular element</title>
+<script type="text/javascript">
+	var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+	var mostPopular = '';
+	var max = 0; 
+	var newArr = {};  
+	for(var i in arr) {
+	        newArr[arr[i]]=(newArr[arr[i]] || 0)+1; 
+	        if(newArr[arr[i]] > max) { 
+	                max = newArr[arr[i]];  
+	                mostPopular = arr[i];          
+	        }
+	}
+	console.log(mostPopular + " (" + max + " times)");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

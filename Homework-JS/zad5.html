@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculate volume</title>
+</head>
+<body onload="sphere_volume()">
+	<label for="radius">Radius:</label>
+	<br/>
+	<input type="text" name="sphere-radius" id="radius">
+	<br/>
+	<label for="volume">Volume:</label>
+	<br/>
+	<input type="text" name="sphere-volume" id="volume">
+	<br/><br/>
+	<input type="submit" value="Calculate" id="calculate">
+</body>
+	<script>
+		function sphere_volume()
+		{
+			var radius = document.getElementById('radius').value;
+			var volume = (4/3) * Math.PI * Math.pow(radius, 3); 
+			volume = volume.toFixed(4);
+			document.getElementById('volume').value = volume;
+			return false;
+		}
+		window.onload = document.getElementById('calculate').onclick = sphere_volume;
+	</script>
+</html>
