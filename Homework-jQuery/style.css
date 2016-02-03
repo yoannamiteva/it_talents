@@ -1,0 +1,65 @@
+form {
+  width: 40%;
+  padding: 20px;
+  background-color: #abc69f;
+  border-radius: 10px;
+  border: 1px solid #538620;
+  margin-bottom: 7%; }
+
+fieldset {
+  border-radius: 10px; }
+
+legend {
+  padding: 10px;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  font-family: "Times New Roman", Times, serif; }
+
+label {
+  color: grey;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold; }
+
+input {
+  border-radius: 5px; }
+
+#subm {
+  border-radius: 7px;
+  background-color: grey;
+  color: white;
+  padding: 2% 5%;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif; }
+
+table {
+  width: 60%;
+  background-color: #f9f7ea; }
+
+table, td, th {
+  border: 1px solid grey;
+  border-radius: 5px; }
+
+td, th {
+  padding: 10px;
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px; }
+
+#remove, #edit {
+  border-radius: 5px;
+  background-color: #abc69f;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  padding: 2% 5%;
+  text-align: center;
+  display: inline-block; }
+
+#edit {
+  margin-right: 20%; }
+
+/*# sourceMappingURL=style.css.map */

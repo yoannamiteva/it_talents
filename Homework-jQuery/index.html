@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Car information</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+</head>
+<body>
+	<section id="form">
+	<form action="" method="post" id="formInformation">
+		 <fieldset>
+			 <legend>Car Information </legend>
+			 <div>
+				 <label for="brand">Brand :</label><br/>
+				 <input type="text" name="brand" id="brand" size="25" />
+			 </div>
+			 <div>
+				 <label for="model">Model :</label><br/>
+				 <input type="text" name="model" id="model" size="25" />
+			 </div>
+			 <div>
+				 <label for="year">Year of production : </label><br/>
+				 <input type="number" name="year" id="year" size="25" />
+			 </div>
+			 <div>
+				 <label for="mileage">Mileage  : </label><br/>
+				 <input type="number" name="mileage" id="mileage" size="25" />
+			 </div>
+			 <br/>
+				 <div id="button">
+				 <input type="submit" value="Submit" id="subm">
+			 </div>
+		 </fieldset>
+	</form>
+	</section>
+	<section>
+		<div>
+			<table>
+				<tr>
+					<th>#</th>
+					<th>Brand</th>
+					<th>Model</th>
+					<th>Year</th>
+					<th>Mileage</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Peugot</td>
+					<td>307</td>
+					<td>2007</td>
+					<td>160000</td>
+					<td><button id="edit">Edit</button><button id="remove">Remove</button></td>
+				</tr>
+			</table>
+		</div>
+	</section>
+</body>
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+			var submit = document.getElementById('form');
+			$('form').on('submit', submitForm);
+			$('#remove').on('click',function(){
+				$(this).closest('tr').remove();
+			})
+			
+			function submitForm(event){
+				event.preventDefault();
+				addCar(submit);
+				$('#edit').off('click');
+				$('#edit').on('click',editInformation);
+				$('#formInformation')[0].reset();
+			}
+			
+			function editInformation(e){
+				var element = e.target.parentElement.parentElement.children;
+				$('form #brand').val(element[1].innerText);
+				$('form #model').val(element[2].innerText);
+				$('form #year').val(element[3].innerText);
+				$('form #mileage').val(element[4].innerText);
+			}
+		
+			function addCar(form){
+			var newCar = $('table tr').length;
+			var content = '<tr>' + '<td>' + newCar + '</td>' +
+				'<td>' + $('#brand', form).val() + '</td>' +
+				'<td>' + $('#model', form).val() +  '</td>' +
+				'<td>' + $('#year', form).val() +  '</td>' +
+				'<td>' + $('#mileage', form).val() + '</td>' +
+				'<td>' + '<button id="edit">Edit</button><button id="remove">Remove</button>' + '</td>'
+				'</tr>';
+			$('table').append(content);
+		}
+		
+	}) (jQuery)
+
+	</script>
+</html>
